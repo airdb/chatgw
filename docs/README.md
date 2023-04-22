@@ -4,10 +4,10 @@ title: Home
 heroImage: /images/tags.png
 actions:
   - text: Get Started
-    link: /intro/
+    link: /zh/docs/
     type: primary
   - text: Introduction
-    link: /intro/
+    link: /zh/docs/
     type: secondary
 features:
   - title: Easy to Use
