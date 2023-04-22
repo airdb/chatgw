@@ -6,7 +6,8 @@ import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@vuepress/theme-default'
 import { path } from '@vuepress/utils'
 import { head, navbarEn, navbarZh, sidebarEn, sidebarZh } from './configs'
-
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig({
@@ -98,6 +99,10 @@ export default defineUserConfig({
       prismjs: !isProd,
     },
   }),
+
+  alias: {
+    // '@theme/Home.vue': require.resolve('./components/MyHome.vue'),
+  },
 
   // configure markdown
   markdown: {
