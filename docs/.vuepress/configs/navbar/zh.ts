@@ -11,7 +11,8 @@ export const navbarZh: NavbarConfig = [
   {
     text: '产品',
     children: [
-          { text: 'Intro', link: '/zh/products.md', },
+      { text: '产品', link: '/zh/products.md', },
+      { text: '优质', link: '/en/awesome.md', },
     ],
   },
   {
