@@ -6,8 +6,7 @@ import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@vuepress/theme-default'
 import { path } from '@vuepress/utils'
 import { head, navbarEn, navbarZh, sidebarEn, sidebarZh } from './configs'
-import { createRequire } from 'node:module'
-const require = createRequire(import.meta.url)
+
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig({
@@ -21,13 +20,13 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'https://gateway.chat',
+      title: 'Chat Gateway',
       description: 'A gateway for AI chat',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'https://gateway.chat',
-      description: '一个 AI 对话的网关',
+      title: '对话网关',
+      description: '一个 AI 智能对话网关',
     },
   },
 
@@ -37,7 +36,8 @@ export default defineUserConfig({
 
   // configure default theme
   theme: defaultTheme({
-    logo: '/images/logo1.png',
+    logo: '/images/airdb.svg',
+    // logo: '/images/logo1.png',
     // repo: 'airdb/chatgw',
     docsDir: 'docs',
 
@@ -99,10 +99,6 @@ export default defineUserConfig({
       prismjs: !isProd,
     },
   }),
-
-  alias: {
-    // '@theme/Home.vue': require.resolve('./components/MyHome.vue'),
-  },
 
   // configure markdown
   markdown: {

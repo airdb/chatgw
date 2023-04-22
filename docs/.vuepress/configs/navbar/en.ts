@@ -9,22 +9,25 @@ export const navbarEn: NavbarConfig = [
     ],
   },
   {
-    text: 'Robots',
+    text: 'Products',
     children: [
-          { text: 'Intro', link: '/en/robot.md', },
+          { text: 'Intro', link: '/en/products.md', },
     ],
   },
   {
-    text: 'Pricing',
+    text: 'Services',
     children: [
-      { text: 'pricing', link: '/en/pricing.md', },
       { text: 'StatusPage', link: 'https://airdb.statuspage.io/', },
+      { text: 'Service', link: '/en/services.md', },
     ],
   },
   {
     text: 'AI Explore',
     children: [
-          { text: 'Intro', link: '/en/eplore.md', },
+          { text: 'Explore', link: '/en/explore.md', },
     ],
+  },
+  {
+    text: 'Docs', link: '/en/docs/README.md',
   },
 ]
