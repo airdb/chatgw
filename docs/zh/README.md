@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: /images/airdb3.png
+heroImage: /images/tags.png
 actions:
   - text: Get Started
     link: /intro/

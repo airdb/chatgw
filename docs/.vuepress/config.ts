@@ -21,13 +21,13 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'https://gateway.chat',
+      title: 'Chat Gateway',
       description: 'A gateway for AI chat',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'https://gateway.chat',
-      description: '一个 AI 对话的网关',
+      title: '对话网关',
+      description: '一个 AI 智能对话网关',
     },
   },
 
@@ -37,7 +37,8 @@ export default defineUserConfig({
 
   // configure default theme
   theme: defaultTheme({
-    logo: '/images/logo1.png',
+    logo: '/images/airdb.svg',
+    // logo: '/images/logo1.png',
     // repo: 'airdb/chatgw',
     docsDir: 'docs',
 
