@@ -1,1 +1,7 @@
-# Products
+---
+sidebar: false
+---
+
+<ClientOnly>
+  <ProductIndex />
+</ClientOnly>

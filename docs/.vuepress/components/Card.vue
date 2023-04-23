@@ -1,6 +1,6 @@
 <template>
   <div class="card-container">
-    <div v-for="(item, index) in cardList" :key="index" class="card-item">
+    <div v-for="(item, index) in list" :key="index" class="card-item">
       <div class="card-header">{{ item.title }}</div>
       <div class="card-body">{{ item.content }}</div>
     </div>
@@ -9,16 +9,15 @@
 
 <script>
 export default {
+  props: {
+    list: {
+      type: Array,
+      value: []
+    }
+  },
   data () {
     return {
-      cardList: [
-        { title: "卡片标题1", content: "卡片内容1" },
-        { title: "卡片标题2", content: "卡片内容2" },
-        { title: "卡片标题3", content: "卡片内容3" },
-        { title: "卡片标题4", content: "卡片内容4" },
-        { title: "卡片标题5", content: "卡片内容5" },
-        { title: "卡片标题6", content: "卡片内容6" },
-      ],
+      
     };
   },
 };
