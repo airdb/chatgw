@@ -1,60 +1,97 @@
 <template>
-  <div class="card-container">
-    <div v-for="(item, index) in list" :key="index" class="card-item">
-      <div class="card-header">{{ item.title }}</div>
-      <div class="card-body">{{ item.content }}</div>
+  <div class="card-list">
+     <div class="card" v-for="(item, index) in list" :key="index">
+      <div class="card-image"> 
+        <img :src="item.imageUrl">
+      </div>
+      <div class="card-info">
+        <p class="card-title">{{ item.title }}</p>
+        <p class="card-description">{{ item.description }}</p>
+        <div class="card-tags">
+          <span class="tag" v-for="tag in item.tags" :key="tag">{{ tag }}</span>
+        </div>
+        <a :href="item.url" class="card-link">{{ item.url }}</a>
+      </div>
     </div>
   </div>
+ 
 </template>
 
 <script>
 export default {
+  name: "Card",
   props: {
     list: {
       type: Array,
       value: []
     }
   },
-  data () {
-    return {
-      
-    };
-  },
 };
 </script>
 
-<style>
-.card-container {
+<style scoped>
+.card-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  /* display: inline-block; */
+  width: 30%;
+  /* 一行最多显示三张卡片 */
+  margin-right: 2%;
+  margin-bottom: 20px;
+  vertical-align: top;
 }
 
-.card-item {
-  width: calc(33.33% - 20px);
-  margin: 10px;
-  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08), 0 4px 16px rgba(0, 21, 41, 0.16);
-  border-radius: 4px;
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    /* 移动端一行只显示一张卡片 */
+    margin-right: 0;
+  }
+}
+
+.card-image {
+  height: 150px;
+  /* 自定义图片高度 */
   overflow: hidden;
 }
 
-.card-header {
-  padding: 16px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  background-color: #f5f7fa;
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.card-body {
-  padding: 16px;
+.card-info {
+  padding: 10px;
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card-description {
   font-size: 14px;
-  color: #666;
-  background-color: #fff;
+  margin-bottom: 10px;
 }
-/* 在屏幕宽度小于等于768px时，每行只展示一个卡片 */
-@media screen and (max-width: 768px) {
-  .card-item {
-    width: calc(100% - 20px);
-  }
+
+.card-tags {
+  margin-bottom: 10px;
 }
-</style>
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #eee;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.card-link {
+  color: blue;
+}</style>

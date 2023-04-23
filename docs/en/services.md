@@ -1,1 +1,7 @@
-# service
+---
+sidebar: false
+---
+
+<ClientOnly>
+  <ServiceIndex />
+</ClientOnly>

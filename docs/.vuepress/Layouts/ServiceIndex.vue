@@ -1,9 +1,6 @@
 <template>
-  <div class="product-index">
-    <input type="text"
-      v-model="state.searchInput"
-      placeholder="请输入内容"
-      class="input">
+  <div class="service-index">
+    <input type="text" v-model="state.searchInput" placeholder="请输入内容" class="input">
     <Card :list="filteredList"></Card>
   </div>
 </template>
@@ -14,7 +11,7 @@ import { reactive, computed } from "vue";
 import Card from "../components/Card.vue";
 
 
-const state =  reactive({
+const state = reactive({
   searchInput: '',
   list: [{
     imageUrl: 'https://gateway.chat/images/tags.png',
@@ -66,7 +63,7 @@ const filteredList = computed(() => {
 
 
 <style lang="scss">
-.product-index {
+.service-index {
   position: relative;
 
   .input {
