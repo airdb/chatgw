@@ -1,1 +1,7 @@
-# AI Explore
+---
+sidebar: false
+---
+
+<ClientOnly>
+  <AIExploreIndex />
+</ClientOnly>
