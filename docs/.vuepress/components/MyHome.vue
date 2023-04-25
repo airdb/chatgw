@@ -3,26 +3,26 @@ import HomeContent from '@theme/HomeContent.vue'
 import HomeFeatures from '@theme/HomeFeatures.vue'
 import HomeFooter from '@theme/HomeFooter.vue'
 import HomeHero from '@theme/HomeHero.vue'
-import Card from './Card.vue'
 import { ref } from 'vue'
-
-const searchText = ref('');
-const searchResults = ref([]);
-
-const search = async () => {
-  const response = await fetch(`https://api.example.com/search?q=${searchText.value}`);
-  const data = await response.json();
-  searchResults.value = data.results;
-};
-
 </script>
 
 <template>
   <main class="home">
-    <div class="home-search">
-      <input type="text" class="search-input" @input="search" placeholder="Search...">
+    <div class="item">
+      <p class="text">
+        API repository
+Easily store, catalog, and collaborate around all your API artifacts on one central platform. Postman can store and manage API specifications, documentation, workflow recipes, test cases and results, metrics, and everything else related to APIs.
+      </p>
+      <img src="https://voyager.postman.com/illustration/api-repository-postman-illustration.svg" alt="">
     </div>
-    <Card />
+    <div class="item">
+      <p class="text">
+        API repository
+Easily store, catalog, and collaborate around all your API artifacts on one central platform. Postman can store and manage API specifications, documentation, workflow recipes, test cases and results, metrics, and everything else related to APIs.
+      </p>
+      <img src="https://voyager.postman.com/illustration/api-repository-postman-illustration.svg" alt="">
+    </div>
+    
     <!-- <HomeHero /> -->
     <!-- <HomeFeatures /> -->
     <HomeContent />
@@ -31,18 +31,33 @@ const search = async () => {
 </template>
 
 
-<style scoped>
-.home-search {
-  position: relative;
-  width: 100%;
-  height: 400px;
+<style scoped lang="scss">
+.item {
+  display: flex;
+  align-items: center;
+  .text {
+    widows: 300px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  &:nth-of-type(odd) {
+    flex-direction: row;
+  }
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
 }
-.search-input {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 350px;
-  height: 30px;
-  transform: translate(-50%, -50%);
+
+@media screen and (max-width: 768px) {
+  .item {
+    &:nth-of-type(odd) {
+      flex-direction: column;
+    }
+    &:nth-of-type(even) {
+      flex-direction: column-reverse;
+    }
+  }
 }
 </style>

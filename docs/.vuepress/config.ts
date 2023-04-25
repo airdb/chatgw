@@ -102,7 +102,7 @@ export default defineUserConfig({
   }),
 
   alias: {
-    // '@theme/Home.vue': require.resolve('./components/MyHome.vue'),
+    '@theme/Home.vue': require.resolve('./components/MyHome.vue'),
   },
 
   // configure markdown
