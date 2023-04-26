@@ -13,6 +13,7 @@ export const navbarEn: NavbarConfig = [
     children: [
           { text: 'Product', link: '/en/products.md', },
           { text: 'Awesome', link: '/en/awesome.md', },
+          { text: 'Pricing', link: '/en/pricing.md'}
     ],
   },
   {
