@@ -1,6 +1,6 @@
 <template>
   <div class="pricing-card-container">
-    <div class="features">
+    <div class="features" v-if="!isMobile">
       <h3>Features</h3>
       <p style="color: hsla(0,0%,100%,.6)">Everything you need to take your productivity to the next level.</p>
       <div class="feature">
@@ -10,13 +10,18 @@
         </p>
       </div>
     </div>
-    <div class="pricing-list">
+    <div class="pricing-list" :class="isMobile ? 'isMobile' : ''">
       <div class="list-item" v-for="(item, index) in pricingList" :key="index">
         <h3 class="item-name">{{ item.name }}</h3>
         <p class="item-price">{{ item.price }}</p>
         <p class="item-desc">{{ item.desc }}</p>
-        <div class="rights">
+        <div class="rights" v-if="!isMobile">
           <p class="right-item" v-for="(r, idx) in item.rights" :key="idx" v-html="getRightValue(r.value)"></p>
+        </div>
+        <div class="rights" v-else>
+          <div v-for="(r, idx) in item.rights" :key="idx">
+            <p class="mobile-right-item" v-html="getMobileRightValue(r.value, r.right)" v-if="r.value"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -60,7 +65,7 @@ export default {
           rights: [
             {
               right: 'Quicklinks',
-              value: true
+              value: true,
             },
             {
               right: 'Shared Quicklinks',
@@ -80,20 +85,20 @@ export default {
             },
             {
               right: 'Shared Quicklinks',
-              value: 'Up to 30'
+              value: 'Up to 30',
             },
               {
               right: 'Shared Quicklinks',
               value: 'Up to 30'
             },
-                {
+            {
               right: 'Quicklinks',
               value: true
             },
           ]
         },
         {
-          name: 'Teams',
+          name: 'Custom',
           tags: ['Paid'],
           price: '$0 per month',
           desc: `Unleash your superpowers at no cost. Yes, really. It's free.`,
@@ -106,9 +111,9 @@ export default {
               right: 'Shared Quicklinks',
               value: 'Unlimited'
             },
-               {
+            {
               right: 'Shared Quicklinks',
-              value: false
+              value: 'Unlimited'
             },
              {
               right: 'Shared Quicklinks',
@@ -116,18 +121,16 @@ export default {
             },
           ]
         }
-      ]
+      ],
+      isMobile: false,
     }
+  },
+  mounted() {
+    this.isMobile = window.innerWidth < 768 || window.screen.width < 768;
   },
   methods: {
     getRightValue(value) {
       switch (value) {
-        // case true:
-        //   return `<svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" class="icon" viewBox="0 0 16 16"><path fill="currentColor" d="M6.686 13.513a.89.89 0 0 0 .78-.413l5.968-9.293c.133-.21.19-.387.19-.558 0-.45-.317-.762-.774-.762-.311 0-.502.114-.692.413l-5.504 8.728L3.83 8.003c-.19-.247-.388-.349-.667-.349-.457 0-.787.324-.787.768 0 .197.07.387.235.584l3.288 4.1c.222.28.457.407.787.407Z"></path></svg>`
-        // case false:
-        //   return `<svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" class="icon" viewBox="0 0 16 16"><path fill="currentColor" d="M3.404 8.724h9.192A.726.726 0 0 0 13.313 8a.73.73 0 0 0-.717-.724H3.404A.739.739 0 0 0 2.687 8c0 .4.343.724.717.724Z"></path></svg>`
-        // default:
-        //   return `<p>${value}</p>`
         case true:
           return `&#10003;`
         case false:
@@ -135,10 +138,22 @@ export default {
         default:
           return `${value}`
       }
+    },
+    getMobileRightValue(value, right) {
+        switch (value) {
+        case true:
+          return `&#10003; ${right}`
+        case false:
+          return `-`
+        default:
+          if (value === 'Unlimited') {
+            return `&#10003; ${value} ${right}`
+          }
+          return `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="progress-half_svg__icon"><circle cx="8" cy="8" r="6.25" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.6" stroke-width="1.5"></circle><path fill="#fff" fill-opacity="0.6" d="M8 4.5c0-.276.225-.503.499-.469a4 4 0 0 1 0 7.938C8.225 12.003 8 11.776 8 11.5v-7Z"></path></svg>&nbsp;${value} ${right}`
+      }
     }
   },
   created() {
-    console.log(this.getRightValue(false))
   }
 };
 </script>
@@ -178,6 +193,9 @@ export default {
   .pricing-list {
     display: flex;
     flex-direction: row;
+    &.isMobile {
+      flex-direction: column;
+    }
     .list-item {
       padding: 10px;
       .item-price {
@@ -193,6 +211,12 @@ export default {
           height: 28px;
           margin: none;
           text-align: center;
+          color: hsla(0,0%,100%,.6);
+        }
+        .mobile-right-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
           color: hsla(0,0%,100%,.6);
         }
       }
