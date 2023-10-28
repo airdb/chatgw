@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2b69492c","path":"/zh/docs/","title":"对话网关","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"定位","slug":"定位","link":"#定位","children":[]}],"git":{"updatedTime":1682186270000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":3}]},"filePathRelative":"zh/docs/README.md"}');export{e as data};

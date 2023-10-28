@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-e8bd74ee","path":"/zh/docs/guide.html","title":"快速开始","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1682185467000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":1}]},"filePathRelative":"zh/docs/guide.md"}');export{e as data};

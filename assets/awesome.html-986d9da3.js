@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-da020104","path":"/zh/awesome.html","title":"优质项目","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1682185467000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":1}]},"filePathRelative":"zh/awesome.md"}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-652c3fba","path":"/zh/docs/fine-tune.html","title":"微调工具","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1682185467000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":1}]},"filePathRelative":"zh/docs/fine-tune.md"}');export{e as data};

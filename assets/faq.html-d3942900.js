@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-3756dea2","path":"/zh/docs/faq.html","title":"常见问题","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1682185467000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":1}]},"filePathRelative":"zh/docs/faq.md"}');export{a as data};

@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-bb225198","path":"/zh/docs/apis.html","title":"开放接口","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1682185467000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":1}]},"filePathRelative":"zh/docs/apis.md"}');export{a as data};

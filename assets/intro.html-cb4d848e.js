@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-5aac7fce","path":"/zh/docs/intro.html","title":"Chat Gateway","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"定位","slug":"定位","link":"#定位","children":[]}],"git":{"updatedTime":1682186270000,"contributors":[{"name":"deancn","email":"dean@airdb.com","commits":2}]},"filePathRelative":"zh/docs/intro.md"}');export{t as data};

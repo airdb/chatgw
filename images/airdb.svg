@@ -1,0 +1,30 @@
+<svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M66.63 0.960007H17.59C8.15145 0.960007 0.5 8.61146 0.5 18.05V67.09C0.5 76.5285 8.15145 84.18 17.59 84.18H66.63C76.0685 84.18 83.72 76.5285 83.72 67.09V18.05C83.72 8.61146 76.0685 0.960007 66.63 0.960007Z" stroke="url(#paint0_linear_21_3)" stroke-miterlimit="10">
+  <animate attributeName="stroke-dasharray" from="300" to="0" dur="3.0s" fill="freeze" repeatCount="indefinite" />
+  <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3.0s" fill="freeze" repeatCount="indefinite" />
+</path>
+<path d="M56.2 70.68H65.58L61.44 62.25H52.05L56.2 70.68Z" fill="url(#paint1_linear_21_3)">
+  <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.5s" fill="freeze" />
+</path>
+<path d="M52.89 16C50.35 14.76 47.55 13.98 44.6 13.77L41.09 20.89L41.13 20.97H41.38C44.29 20.97 47.02 21.77 49.36 23.17C53.97 25.91 57.08 30.95 57.08 36.67C57.08 40.35 55.79 43.74 53.66 46.42L45.79 30.42L41.14 20.97H41.07L36.41 30.42L26.85 49.8L21.78 60.08L16.55 70.69H25.94L31.17 60.09H43.05C45.62 60.09 48.09 59.65 50.4 58.85C53.1 57.91 55.58 56.47 57.71 54.64L58.08 54.31C62.7 50.17 65.62 44.16 65.62 37.51V36.3C65.62 27.42 60.42 19.69 52.91 16.01L52.89 16ZM34.95 52.36L41.08 39.94L46.73 51.42C43.92 52.63 36.83 52.37 34.95 52.35V52.36Z" fill="url(#paint2_linear_21_3)">
+  <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3.0s" fill="freeze" repeatCount="indefinite" />
+</path>
+<defs>
+<linearGradient id="paint0_linear_21_3" x1="-1.15755e-08" y1="42.57" x2="84.22" y2="42.57" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3072E6"/>
+<stop offset="1" stop-color="#5E05D6"/>
+</linearGradient>
+<linearGradient id="paint1_linear_21_3" x1="25.1" y1="26.28" x2="60.38" y2="68.32" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#3072E6">
+    <animate attributeName="stop-opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite"/>
+  </stop>
+  <stop offset="1" stop-color="#5E05D6">
+    <animate attributeName="stop-opacity" values="0; 1; 0" dur="2s" repeatCount="indefinite"/>
+  </stop>
+</linearGradient>
+<linearGradient id="paint2_linear_21_3" x1="23.08" y1="27.97" x2="58.36" y2="70.01" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3072E6"/>
+<stop offset="1" stop-color="#5E05D6"/>
+</linearGradient>
+</defs>
+</svg>
